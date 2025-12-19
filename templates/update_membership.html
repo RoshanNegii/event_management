@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Membership</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+        <div class="header">
+            <h2>Update Membership</h2>
+            <p>Maintenance Module</p>
+        </div>
+
+        <form method="post">
+            <label>Membership Number</label>
+            <input type="number" name="mid" required>
+
+            <label>Action</label><br>
+            <input type="radio" name="action" value="extend" checked>
+Extend Membership (6 Months)<br>
+
+<input type="radio" name="action" value="cancel">
+Cancel Membership<br>
+
+<input type="radio" name="action" value="delete">
+Remove Member (Permanent)<br><br>
+
+            <button type="submit">Update</button>
+                </form>
+
+        <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+    </div>
+</div>
+
+</body>
+</html>

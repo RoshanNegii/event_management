@@ -1,0 +1,160 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #1f2933;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- Page Layout ---------- */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--card);
+    width: 420px;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.card.large {
+    width: 520px;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* ---------- Forms ---------- */
+
+label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------- Dashboard Actions ---------- */
+
+.actions a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary);
+    background: #f8fafc;
+}
+
+.actions a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ---------- Table ---------- */
+
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---------- Footer Link ---------- */
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

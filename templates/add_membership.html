@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Membership</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+        <div class="header">
+            <h2>Add Membership</h2>
+            <p>Maintenance Module</p>
+        </div>
+
+        <form method="post">
+            <label>Member Name</label>
+            <input type="text" name="name" required>
+
+            <label>Duration</label><br>
+            <input type="radio" name="duration" value="6" checked> 6 Months<br>
+            <input type="radio" name="duration" value="12"> 1 Year<br>
+            <input type="radio" name="duration" value="24"> 2 Years<br><br>
+
+            <button type="submit">Add Membership</button>
+         </form>
+
+        <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+    </div>
+</div>
+</body>
+</html>
+
+

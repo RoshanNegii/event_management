@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page">
+    <div class="card large">
+        <div class="header">
+            <h2>Dashboard</h2>
+            <p>Welcome to Event Management System</p>
+        </div>
+
+        <div class="actions">
+            {% if role == 'admin' %}
+                <a href="/add">➕ Add Membership</a>
+                <a href="/update">✏️ Update Membership</a>
+            {% endif %}
+            <a href="/report">📊 View Report</a>
+            <a href="/logout">🚪 Logout</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
