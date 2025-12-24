@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Update Membership</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -14,25 +15,39 @@
         </div>
 
         <form method="post">
-            <label>Membership Number</label>
-            <input type="number" name="mid" required>
+            <label for="mid">Membership Number</label>
+            <input
+                type="number"
+                id="mid"
+                name="mid"
+                placeholder="Enter Membership Number"
+                min="1"
+                step="1"
+                required
+            >
 
-            <label>Action</label><br>
-            <input type="radio" name="action" value="extend" checked>
-Extend Membership (6 Months)<br>
+            <label>Action</label>
 
-<input type="radio" name="action" value="cancel">
-Cancel Membership<br>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="action" value="extend" checked>
+                    Extend Membership (6 Months)
+                </label>
 
-<input type="radio" name="action" value="delete">
-Remove Member (Permanent)<br><br>
+                <label>
+                    <input type="radio" name="action" value="cancel">
+                    Cancel Membership
+                </label>
+
+                <label>
+                    <input type="radio" name="action" value="delete">
+                    Remove Member (Permanent)
+                </label>
+            </div>
 
             <button type="submit">Update</button>
-                </form>
+        </form>
 
         <a href="/dashboard" class="back-link">← Back to Dashboard</a>
     </div>
 </div>
-
-</body>
-</html>
